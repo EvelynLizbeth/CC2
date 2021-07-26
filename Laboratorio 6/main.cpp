@@ -3,9 +3,10 @@ using namespace std;
 #include"LinkedList.h"
 #include"node.h"
 #include"LinkedList.cpp"
-#include "iterator.h"
+#include"iterator.cpp"
 int main(){
     LinkedList <int> lista;
+
     lista.pushFront(99);
     lista.pushBack(5);
     lista.pushBack(3);
@@ -23,14 +24,16 @@ int main(){
     lista.print();
     lista.popBack();
     lista.print();
-
-
-    cout<< endl;
     //lista.search(3);
 
-    //for (Iterator <int>*it=lista.begin(); it!=lista.end();it++){
-        //cout<<*it<<endl;
-    //}
+    cout<< "------------Iterator-------------"<<endl;
+    
+
+    //cout<<lista.begin()<<endl;
+    Iterator <int>it;
+    for (it=lista.begin() ; it!=lista.end() ; it++){
+        cout<<*it<<endl;
+    }
 	    
 
     return 0;

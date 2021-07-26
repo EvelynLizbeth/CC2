@@ -1,23 +1,22 @@
 #ifndef _ITERATOR_H__
 #define _ITERATOR_H_
 #include"LinkedList.h"
-#include<iostream>
-using namespace std;
-
-template <typename U>class Iterator;
+#include"node.h"
 
 template <typename U>
 class Iterator{
-    private:
-        Node<U> *p;
+    Node<U>* p;
 
     public:
-        Iterator();
+        //Iterator();
+        
 
         //U Iterator& operator *();
-        U  operator *();
-        void  operator ++();
-        bool operator=(const Iterator&);
+        U operator *();
+        void  operator++(U);
+        void operator=(Node<U>* it);
+        bool operator==(Node<U>* it);
+        bool operator!=(Node<U>* it);
 };
 
 

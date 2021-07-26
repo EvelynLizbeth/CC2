@@ -1,8 +1,8 @@
 #ifndef __LINKEDLIST_H__
 #define __LINKEDLIST_H__
-#include"Node.h"
+#include"node.h"
 #include<iostream>
-#include "iterator.h"
+//#include "iterator.h"
 
 template <typename U>
 class LinkedList{
@@ -25,8 +25,8 @@ class LinkedList{
 
         bool search(U e);
 
-        Iterator<U>* begin();
-        Iterator<U>* end();
+        Node<U>* begin();
+        Node<U>* end();
         //void buscar();
 
 

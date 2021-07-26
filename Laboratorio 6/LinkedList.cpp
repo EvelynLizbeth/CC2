@@ -3,7 +3,7 @@ using namespace std;
 #include"LinkedList.h"
 #include"node.h"
 #include"node.cpp"
-#include"iterator.h"
+//#include"iterator.h"
 template<typename U> LinkedList<U>::LinkedList(){
     size=0;
     head=nullptr;
@@ -164,45 +164,19 @@ template<typename U> LinkedList<U>::~LinkedList(){
 }
 
 
-template<typename U> Iterator<U>::Iterator(){
-    p=nullptr;
-}
-
-template<typename U> Iterator<U>*  LinkedList<U>::begin(){
+template<typename U> Node<U>* LinkedList<U>::begin(){
     
-    return head->getNext;
+    return head;
 }
 
 
-template<typename U> Iterator<U>*  LinkedList<U>::end(){
-    return cola;
+template<typename U> Node<U>*  LinkedList<U>::end(){
+    Node<U> *it =head;
+    while(it!=nullptr){
+        it=it->getNext();
+    }
+    return it;
 }
-
-
-
-template<typename U> bool Iterator<U>::operator=(const Iterator<U>& it){
-    return p=it;
-}
-
-template<typename U> Iterator<U>::Iterator(){
-    p=nullptr;
-}
-
-
-template<typename U> U Iterator<U>::operator * () 
-{
-    return p->getElem;
-
-}
-
-template<typename U> void Iterator<U>::operator ++ ()
-{
-    return p=p->getNext;
-}
-
-
-
-
 
 
 
